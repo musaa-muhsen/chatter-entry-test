@@ -1,3 +1,3 @@
 # chatter-musaa-muhsen
 
-the .scss will be in the app folder 
+the .scss files will be in the app folder 
