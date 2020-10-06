@@ -1,0 +1,263 @@
+@import "var-mixins";
+
+    // @@@@@@@@@@@@@@@@@@@@@@@@@ quote header viewpoint @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    .quote-header-container {
+        
+        // border-top: 2px solid $grey_l1;
+        // @media only screen and (max-width: 750px) {
+        //     border-top: none;
+        // }
+        h1 {
+            color: $blue;
+            margin: 90px 0 79px 137px;
+            font-size: 49px;
+            font-weight: $bold1;
+            span {
+                text-transform: uppercase;
+            }
+            @media only screen and (max-width: 1700px) {
+                margin: 90px 0 79px 100px;
+                font-size: (49*$p8+px);
+    
+            }
+            @media only screen and (max-width: 1200px) {
+                margin: 90px 0 79px 20px;
+                font-size: (49*$p7+px);
+               
+    
+            }
+            @media only screen and (max-width: 700px) {
+                //font-size: (49*$p6+px);
+                margin: 50px 0 50px 20px;
+    
+                
+            }
+    
+            @media only screen and (max-width: 450px) {
+                font-size: (49*$p6+px);
+                margin: 50px 0 50px 20px;
+    
+            }
+    
+        }
+        
+        
+    }
+      // @@@@@@@@@@@@@@@@@@@@@@@@@ whole structure @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+    .quote-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        .quote-label {
+           justify-self: end;
+            //background:blue;
+            grid-column: 1 / span 1;
+            grid-row: 1 / 1;    
+        }
+        .quote-container {
+            grid-column: 2/ span 2;
+            grid-row: 1 / 1;
+        }
+        @media only screen and (max-width: 900px) {
+            // grid-template-columns: 1fr ;
+            // grid-template-rows: 300px 300px;
+            display: flex;
+            flex-direction:column-reverse;
+           
+             .quote-label {
+                 
+                 margin: 50px 0 50px 0;
+    
+            }
+        }
+    
+    }
+    
+    ////////////////////////////  the actual quote /////////////////////
+    blockquote {
+        border:none;
+        color: $greyDark;
+        margin-bottom:-30px;
+        position: relative; 
+        max-width: 810px; 
+        line-height: 42px;
+            margin: 0 auto;
+    
+            .darker-quote {
+                color: $black;
+            }
+            h3 {
+                font-size:34px;
+                line-height: 42px;
+            }
+            h3:before { 
+                content: "\0022";
+                font-weight: bold;
+                font-size:84px;
+                position: absolute; 
+                top: -0.2em;
+                left: -70px; 
+                color: $pink;
+                
+                
+            } 
+           h3:after { 
+                content: "\0022";
+                font-weight: bold;
+                font-size:84px;
+                position: absolute; 
+                bottom: -0.5em;
+                right: -60px; 
+                color: $pink;
+                
+            }
+            @media only screen and (max-width: 1700px) {
+                max-width: 600px;
+                h3 {
+                    font-size:(34*$p8+px);
+                    line-height: (42*$p8+px);    
+                }
+                h3:before, h3:after  {
+                    font-size:(84*$p8+px);
+    
+                } 
+                h3:before {
+                    top: -0.1em;
+                    left: -50px; 
+    
+                }
+                h3:after {
+                    bottom: -0.5em;
+                    right: -40px; 
+    
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                max-width: 500px;
+                h3 {
+                    font-size:(34*$p7+px);
+                    line-height: (42*$p7+px);    
+                }
+                h3:before, h3:after  {
+                    font-size:(84*$p7+px);
+    
+                } 
+                h3:before {
+                    top: -0.1em;
+                    left: -40px; 
+    
+                }
+                h3:after {
+                    bottom: -0.5em;
+                    right: -30px; 
+    
+                }
+    
+            }
+            @media only screen and (max-width: 700px) {
+                max-width: 400px;
+                h3 {
+                    font-size:(34*$p6+px);
+                    line-height: (42*$p6+px);    
+                }
+                h3:before, h3:after  {
+                    font-size:(84*$p6+px);
+    
+                } 
+                h3:before {
+                    top: -0.2em;
+                    left: -40px; 
+    
+                }
+                h3:after {
+                    bottom: -0.7em;
+                    right: -30px; 
+    
+                }
+                
+            }
+    
+            @media only screen and (max-width: 550px) {
+                max-width: 300px;
+                h3 {
+                    font-size:(34*$p5+px);
+                    line-height: (42*$p5+px);    
+                }
+                h3:before, h3:after  {
+                    font-size:(84*$p5+px);
+    
+                } 
+                h3:before {
+                    top: -0.2em;
+                    left: -25px; 
+    
+                }
+                h3:after {
+                    bottom: -0.7em;
+                    right: -20px; 
+    
+                }
+                
+            }
+    
+            @media only screen and (max-width: 450px) {
+                max-width: 260px;
+                h3:after {
+                    bottom: -0.7em;
+                    right: -10px; 
+    
+                }
+            }
+    
+        }
+    
+    ///@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ block label @@@@@@@@@@@@@@@@@@@@@@@@@@@
+        .quote-label {
+            //background: pink;
+            
+            width: 258px;
+            
+            font-size: 17px;
+            line-height: 29px;
+            .quote-wrapper {
+              
+                width: auto;
+                height: auto;
+            }
+        
+            .quote-name {
+                font-weight: $bold1;
+    
+            }
+            .quote-occupation {
+                font-weight: 200;
+    
+            }
+    
+            @media only screen and (max-width: 900px) {
+                //background: pink;
+               width: 100%;
+               
+               display: flex;
+               justify-content: flex-end;
+    
+            .quote-wrapper {
+              
+                width: 200px;
+                height: auto;
+                //border: blue solid 1px;
+            }
+            
+            }
+    
+            @media only screen and (max-width: 600px) {
+                line-height: 22px;
+                font-size: 15px;
+                .quote-wrapper {
+                    width: 160px;
+                }
+            }
+           
+        }

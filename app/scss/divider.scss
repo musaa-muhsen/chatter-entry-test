@@ -1,0 +1,25 @@
+div.spot-pattern-divider {
+    margin: 0 auto;
+    margin-top: 98px;
+    margin-bottom: 57px;
+  width: 100%;
+  height: 78px;
+background: white;
+background-image: radial-gradient(rgba(232,43,146,0.3) 2.5px, transparent 0);
+background-size: 35px 35px;
+background-position: -39px -48px;
+@media all and (max-width: 1638px) {
+  // width: calc(100% - 100px);
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+@media all and (max-width: 1000px ) {
+  background-image: radial-gradient(rgba(232,43,146,0.3) 1.5px, transparent 0);
+
+    height: 50px;
+    background-size: 21px 21px;
+background-position: -47px -48px;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+}

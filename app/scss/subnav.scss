@@ -1,0 +1,357 @@
+@import "var-mixins";
+
+.subnav-container > * {
+    // outline: blue solid 1px;
+ }
+ .wrapper-main-subnav {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    @include s-mw-1099 {
+        max-width: 900px;
+        
+      }
+      @include s-mw-750 { 
+        max-width: 450px;
+
+    }
+    @include  s-mw-500 {
+       max-width: 100%;                 
+    }
+}
+ .subnav-container {
+ 
+   
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-auto-rows: auto;
+     grid-row-gap: 30px; // ============== bottom gap 
+     @include s-mw-1449 { 
+         grid-row-gap: 20px;
+      }
+      @include s-mw-1249 { 
+         grid-row-gap: 0px;
+       }
+       @include s-mw-1099 {
+         grid-template-columns: repeat(2, 1fr);
+         grid-row-gap: 0 
+       }
+      @include  s-mw-900 {
+         grid-template-columns: repeat(2, 1fr);
+         grid-row-gap: 0 
+ 
+      }
+      @include s-mw-750 { 
+         grid-template-columns: 1fr;
+         grid-row-gap: 0 
+ 
+     }
+     @include  s-mw-500 {
+         grid-template-columns: 1fr;
+         grid-row-gap: 30px;
+                         
+     }
+       
+ 
+     .subnav-block {
+         width: auto;
+         height: auto;
+         margin-left: 50px; // ============   margin left
+         @include s-mw-1449 { 
+             margin-left: 40px;
+          }
+          @include s-mw-1249 { 
+             margin-left: 30px;
+           }
+           @include s-mw-1099{
+ 
+                       
+         }
+         @include s-mw-900{
+             margin-left: 30px;
+ 
+ 
+           }
+           @include s-mw-750 { 
+ 
+         }
+         @include  s-mw-500 {
+             margin-left: 10px;
+                         
+         }
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+        article {
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+         
+         .info {
+             padding-top: 20px;//  ======== title push down 
+             @include s-mw-1449 { 
+                padding-top: 30px;
+             }
+             @include s-mw-1249 { 
+                 padding-top: 30px;
+              }
+              @include s-mw-1099{
+                 padding-top: 50px;
+                       
+             }
+             @include s-mw-900 {
+                 padding-top: 30px;
+                       
+             }
+             
+             @include s-mw-750 { 
+                 padding-top: 40px;
+ 
+             }
+             @include  s-mw-500 {
+                 padding-top: 0px;
+                         
+             }
+ 
+ 
+            // outline: red solid 1px;
+            // margin-bottom: 40px;
+             display: flex;
+             flex-direction: column;
+             // margin-top: 3%;
+             // margin-left: 3%;
+             p {
+                 color: $greyDark;
+                 margin-top: 16px;
+                 margin-bottom: 16px;
+                 width: 319px;
+                 font-size: 17px;
+                 line-height: 24px;
+                 @include s-mw-1638 {
+                     font-size: (17*$p8+px);
+                     line-height: (24*$p8+px); 
+                   }
+                   @include s-mw-1449 {
+                     font-size: (17*$p7+px);
+                     line-height: (24*$p7+px); 
+                     width: 300px;
+                   }
+                   @include s-mw-1249{
+                     font-size: (17*$p7+px);
+                     line-height: (24*$p7+px); 
+                     width: 300px;
+                   }
+                   @include s-mw-1099{
+                     font-size: (17*$p7+px);
+                     line-height: (24*$p7+px); 
+                     width: 280px;
+ 
+                   }
+                   @include s-mw-900{
+                     font-size: (17*$p7+px);
+                     line-height: (24*$p7+px); 
+                     width: 270px;
+ 
+                   }
+                   @include s-mw-750 { 
+                     font-size: (17*$p7+px);
+                     line-height: (24*$p7+px); 
+                     width: 270px;
+ 
+                 }
+                 @include  s-mw-500 {
+                     font-size: (17*$p7+px);
+                     line-height: (24*$p7+px); 
+                     width: 240px;
+                         
+                 }
+                 
+                 
+             }
+             h2 {
+                 
+                 text-transform: capitalize;
+                 color: $blue;
+                 font-size: 42px;
+                 @include s-mw-1638 {
+                     font-size: (42*$p9+px)
+                   }
+                   @include s-mw-1449 {
+                     font-size: (42*$p8+px)
+                   }
+                   @include s-mw-1249 {
+                     font-size: (42*$p7+px)
+                 }
+                 @include s-mw-1099{
+                     font-size: (42*$p8+px)
+                       
+                 }
+                 @include s-mw-900 {
+                     font-size: (42*$p7+px)
+ 
+                 }
+                 @include s-mw-750 { 
+                    
+                         font-size: (42*$p7+px)
+     
+                     
+                 }
+                 @include  s-mw-500 {
+                     font-size: (42*$p6+px)
+                 }
+ 
+             }
+             button {
+                 &:hover {
+                     //$border-dark: rgba($pink, 0.1);
+                     background-color: darken($pink, 12%);
+                   }
+
+                 transition: background-color 0.4s;
+                 background-color: $pink;
+                 color: $white;
+                 width: 207px;
+                 height: 60px;
+                 border-radius: 30px;
+                 border: none;
+                 cursor: pointer;
+ 
+                 @include s-mw-1638 {
+                     width: (207*$p9+px);
+                     height: (60*$p9+px);
+                     border-radius: (30*$p9+px)
+                  }
+                  @include s-mw-1449 {
+                     width: (207*$p8+px);
+                     height: (60*$p8+px);
+                     border-radius: (30*$p8+px)
+                   }
+                   @include s-mw-1249 {
+                     width: (207*$p7+px);
+                     height: (60*$p7+px);
+                     border-radius: (30*$p7+px)
+                 }
+                 @include s-mw-1099{
+                     width: (207*$p8+px);
+                     height: (60*$p8+px);
+                     border-radius: (30*$p8+px)
+                       
+                 }
+                 @include s-mw-900{
+                     width: (207*$p7+px);
+                     height: (60*$p7+px);
+                     border-radius: (30*$p7+px)
+                       
+                 }
+                 @include s-mw-750 { 
+                     width: (207*$p7+px);
+                     height: (60*$p7+px);
+                     border-radius: (30*$p7+px)
+                 }
+                 @include  s-mw-500 {
+                     width: (207*$p7+px);
+                     height: (60*$p7+px);
+                     border-radius: (30*$p7+px)
+                         
+                 }
+                 
+                 
+                 a {
+
+                    display: block;
+                    width: 100%;
+                     font-size: 17px;
+                     text-transform: uppercase;
+                     color: $white;
+                     font-weight: $bold2;
+                     @include s-mw-1638 {
+                         font-size: (17*$p9+px)
+                      }
+                      @include s-mw-1449 {
+                         font-size: (17*$p8+px)
+                       }
+                       @include s-mw-1249 { 
+                         font-size: (17*$p8+px)
+                      }
+                      @include s-mw-1099{
+                         font-size: (17*$p8+px)
+                       
+                     }
+                     @include s-mw-900 {
+                         font-size: (17*$p8+px)
+                     }
+                     @include s-mw-750 { 
+                         font-size: (17*$p8+px)
+ 
+                     }
+                     @include  s-mw-500 {
+                         font-size: (17*$p7+px)
+ 
+                     }
+                      
+ 
+                    
+                 }
+ 
+             }
+         }
+ 
+ 
+        } 
+         
+        .image-container {
+            padding-top: 8.3vh; // ============== make height
+             @include  s-mw-500 {
+                 padding-top: 6vh;
+                         
+             }
+             @media all and (max-width: 350px) {
+                 padding-top: 100px;
+             }
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         img {
+             max-width: 100%;
+             height: auto;
+ 
+         
+         
+             display: block;
+             @include s-mw-1638 {
+                width: 340px; 
+             }
+             @include s-mw-1449 {
+                 width: 320px;
+               }
+               @include s-mw-1249 {
+                   width: 290px;
+               }
+               @include s-mw-1099{
+                 width: 300px;
+             }
+             @include s-mw-900 {
+                 width: 260px;
+             }
+             @include s-mw-750 { 
+                 width: 280px;
+ 
+ 
+             }
+             @include  s-mw-500 {
+                 width: 280px;
+                         
+             }
+             @media all and (max-width: 350px) {
+                 width: 270px;
+             }
+          
+         }
+        }
+        
+ 
+     }
+    
+ }
+

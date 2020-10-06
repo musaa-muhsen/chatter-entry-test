@@ -1,0 +1,65 @@
+$bold1: 700;
+$bold2: 600;
+
+$p9: 0.9;
+$p8: 0.8;
+$p7: 0.7;
+$p6: 0.6;
+$p5: 0.5;
+$p4: 0.4;
+$p3: 0.3;
+
+$black: #000;
+$white: #fff;
+$blue:#25408F;
+$pink: #E82B92;
+$grey_l1: #DFDFDF;
+$grey_l2: #E7E8ED;
+$grey_m: #9B9797;
+$greyDark: #454545;
+
+@mixin s-mw-1638 {
+	@media all and (max-width: 1700px) and (min-width: 1450px) {
+       @content;
+	}
+}
+
+@mixin s-mw-1449 {
+	@media all and (max-width: 1449px) and (min-width: 1250px) {
+       @content;
+	}
+}
+
+@mixin s-mw-1249 {
+	@media all and (max-width: 1249px) and (min-width: 1100px) {
+       @content;
+	}
+}
+@mixin s-mw-1099 {
+	@media all and (max-width: 1099px) and (min-width: 901px) {
+       @content;
+	}
+}
+@mixin s-mw-900 {
+	@media all and (max-width: 900px) and (min-width: 751px) {
+       @content;
+	}
+}
+
+@mixin s-mw-750 {
+	@media all and (max-width: 750px) and (min-width: 451px) {
+       @content;
+	}
+}
+
+
+@mixin s-mw-500 {
+    @media all and (max-width: 450px) {
+        @content;
+     }
+
+}
+
+
+$font1:  Arial, "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+
